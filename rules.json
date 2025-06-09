@@ -694,42 +694,5 @@
       "or": null,
       "not": null
     }
-  },
-  {
-    "id": 24,
-    "description": "Card must have a number equal to the number of letters in its suit name",
-    "difficulty": 5,
-    "logic": "(card.suit == \"hearts\" && card.number == 6) || (card.suit == \"clubs\" && card.number == 5) || (card.suit == \"spades\" && card.number == 6) || (card.suit == \"diamonds\" && card.number == 8)",
-    "conditions": {
-      "single": null,
-      "and": null,
-      "or": [
-        {
-          "single": null,
-          "and": null,
-          "or": null,
-          "not": null
-        },
-        {
-          "single": null,
-          "and": null,
-          "or": null,
-          "not": null
-        },
-        {
-          "single": null,
-          "and": null,
-          "or": null,
-          "not": null
-        },
-        {
-          "single": null,
-          "and": null,
-          "or": null,
-          "not": null
-        }
-      ],
-      "not": null
-    }
   }
 ]

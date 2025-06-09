@@ -674,25 +674,5 @@
       "or": null,
       "not": null
     }
-  },
-  {
-    "id": 23,
-    "description": "All cards must alternate suits in the order: hearts → diamonds → clubs → spades (looped)",
-    "difficulty": 10,
-    "logic": "getNextSuit(previous.suit) == card.suit",
-    "conditions": {
-      "single": [
-        {
-          "attribute": "suit",
-          "value": null,
-          "compare_to": "previous",
-          "field": "next_suit",
-          "operator": "=="
-        }
-      ],
-      "and": null,
-      "or": null,
-      "not": null
-    }
   }
 ]

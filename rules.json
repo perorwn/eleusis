@@ -1,0 +1,735 @@
+[
+  {
+    "id": 1,
+    "description": "Card must be red",
+    "difficulty": 1,
+    "logic": "card.color == \"red\"",
+    "conditions": {
+      "single": [
+        {
+          "attribute": "color",
+          "value": "red",
+          "compare_to": null,
+          "field": null,
+          "operator": "=="
+        }
+      ],
+      "and": null,
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 2,
+    "description": "Card number must be greater than 10 and suit must be hearts",
+    "difficulty": 3,
+    "logic": "card.number > 10 && card.suit == \"hearts\"",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 3,
+    "description": "Card number must be even and different from the previous card's number",
+    "difficulty": 5,
+    "logic": "card.number % 2 == 0 && card.number != previous.number",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 4,
+    "description": "Card is red if the previous card was black, otherwise it must be black",
+    "difficulty": 7,
+    "logic": "(previous.color == \"black\" && card.color == \"red\") || (previous.color != \"black\" && card.color == \"black\")",
+    "conditions": {
+      "single": null,
+      "and": null,
+      "or": [
+        {
+          "single": null,
+          "and": [
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            }
+          ],
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": [
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            }
+          ],
+          "or": null,
+          "not": null
+        }
+      ],
+      "not": null
+    }
+  },
+  {
+    "id": 5,
+    "description": "Card is a red queen or a black card with an odd number less than 5",
+    "difficulty": 9,
+    "logic": "(card.color == \"red\" && card.number == 12) || (card.color == \"black\" && card.number % 2 == 1 && card.number < 5)",
+    "conditions": {
+      "single": null,
+      "and": null,
+      "or": [
+        {
+          "single": null,
+          "and": [
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            }
+          ],
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": [
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            }
+          ],
+          "or": null,
+          "not": null
+        }
+      ],
+      "not": null
+    }
+  },
+  {
+    "id": 6,
+    "description": "Card must be black",
+    "difficulty": 1,
+    "logic": "card.color == \"black\"",
+    "conditions": {
+      "single": [
+        {
+          "attribute": "color",
+          "value": "black",
+          "compare_to": null,
+          "field": null,
+          "operator": "=="
+        }
+      ],
+      "and": null,
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 7,
+    "description": "Card number is less than 5 and suit is spades",
+    "difficulty": 3,
+    "logic": "card.number < 5 && card.suit == \"spades\"",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 8,
+    "description": "Card number must be exactly 1 higher than the previous card's number",
+    "difficulty": 5,
+    "logic": "card.number == previous.number + 1",
+    "conditions": {
+      "single": [
+        {
+          "attribute": "number",
+          "value": null,
+          "compare_to": "previous",
+          "field": "number+1",
+          "operator": "=="
+        }
+      ],
+      "and": null,
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 9,
+    "description": "Card color must be different from the previous card's color",
+    "difficulty": 6,
+    "logic": "card.color != previous.color",
+    "conditions": {
+      "single": [
+        {
+          "attribute": "color",
+          "value": null,
+          "compare_to": "previous",
+          "field": "color",
+          "operator": "!="
+        }
+      ],
+      "and": null,
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 10,
+    "description": "Card is red and either its number is a multiple of 3 or its suit is diamonds",
+    "difficulty": 8,
+    "logic": "card.color == \"red\" && (card.number % 3 == 0 || card.suit == \"diamonds\")",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": [
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            }
+          ],
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 11,
+    "description": "Card number must be greater than 5 and less than 10",
+    "difficulty": 2,
+    "logic": "card.number > 5 && card.number < 10",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 12,
+    "description": "Card suit must be clubs and number must be even",
+    "difficulty": 3,
+    "logic": "card.suit == \"clubs\" && card.number % 2 == 0",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 13,
+    "description": "Card number must be greater than previous card's number",
+    "difficulty": 4,
+    "logic": "card.number > previous.number",
+    "conditions": {
+      "single": [
+        {
+          "attribute": "number",
+          "value": null,
+          "compare_to": "previous",
+          "field": "number",
+          "operator": ">"
+        }
+      ],
+      "and": null,
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 14,
+    "description": "Card must be black if previous card was red",
+    "difficulty": 5,
+    "logic": "previous.color == \"red\" ? card.color == \"black\" : true",
+    "conditions": {
+      "single": null,
+      "and": null,
+      "or": [
+        {
+          "single": null,
+          "and": [
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            }
+          ],
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": {
+            "single": null,
+            "and": null,
+            "or": null,
+            "not": null
+          }
+        }
+      ],
+      "not": null
+    }
+  },
+  {
+    "id": 15,
+    "description": "Card suit must be the same as previous card's suit",
+    "difficulty": 4,
+    "logic": "card.suit == previous.suit",
+    "conditions": {
+      "single": [
+        {
+          "attribute": "suit",
+          "value": null,
+          "compare_to": "previous",
+          "field": "suit",
+          "operator": "=="
+        }
+      ],
+      "and": null,
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 16,
+    "description": "Card is red and number is not a multiple of 3",
+    "difficulty": 7,
+    "logic": "card.color == \"red\" && card.number % 3 != 0",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": {
+            "single": null,
+            "and": null,
+            "or": null,
+            "not": null
+          }
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 17,
+    "description": "If the card is hearts or diamonds, number must be prime",
+    "difficulty": 9,
+    "logic": "(card.suit == \"hearts\" || card.suit == \"diamonds\") && [2,3,5,7,11,13].includes(card.number)",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": [
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            }
+          ],
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": [
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            },
+            {
+              "single": null,
+              "and": null,
+              "or": null,
+              "not": null
+            }
+          ],
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 18,
+    "description": "Card must have same parity (odd/even) as previous card and opposite color",
+    "difficulty": 10,
+    "logic": "(card.number % 2 == previous.number % 2) && (card.color != previous.color)",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 19,
+    "description": "Only royal cards (number 11 to 13) in black suits are allowed",
+    "difficulty": 3,
+    "logic": "(card.number >= 11 && card.number <= 13) && card.color == \"black\"",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 20,
+    "description": "Card must mirror the previous card: same number and same color, but different suit",
+    "difficulty": 6,
+    "logic": "card.number == previous.number && card.color == previous.color && card.suit != previous.suit",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 21,
+    "description": "Card is allowed only if it completes a red-black-red sandwich: red, black, red (current card)",
+    "difficulty": 8,
+    "logic": "previous.color == \"black\" && card.color == \"red\"",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 22,
+    "description": "Card must be from the same color group as previous but differ by exactly 2 in number",
+    "difficulty": 7,
+    "logic": "card.color == previous.color && Math.abs(card.number - previous.number) == 2",
+    "conditions": {
+      "single": null,
+      "and": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 23,
+    "description": "All cards must alternate suits in the order: hearts → diamonds → clubs → spades (looped)",
+    "difficulty": 10,
+    "logic": "getNextSuit(previous.suit) == card.suit",
+    "conditions": {
+      "single": [
+        {
+          "attribute": "suit",
+          "value": null,
+          "compare_to": "previous",
+          "field": "next_suit",
+          "operator": "=="
+        }
+      ],
+      "and": null,
+      "or": null,
+      "not": null
+    }
+  },
+  {
+    "id": 24,
+    "description": "Card must have a number equal to the number of letters in its suit name",
+    "difficulty": 5,
+    "logic": "(card.suit == \"hearts\" && card.number == 6) || (card.suit == \"clubs\" && card.number == 5) || (card.suit == \"spades\" && card.number == 6) || (card.suit == \"diamonds\" && card.number == 8)",
+    "conditions": {
+      "single": null,
+      "and": null,
+      "or": [
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        },
+        {
+          "single": null,
+          "and": null,
+          "or": null,
+          "not": null
+        }
+      ],
+      "not": null
+    }
+  }
+]

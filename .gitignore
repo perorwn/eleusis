@@ -1,0 +1,10 @@
+# 보안 키 파일은 절대 포함하지 않음
+private.pem
+public.pem
+
+# 내부용 툴 스크립트 제외
+create_signature.py
+update_rules.bat
+
+# .meta 파일은 필요에 따라 무시
+*.meta
